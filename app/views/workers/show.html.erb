@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>Datos funcionarios</h1>
+<hr>
+<p>
+  <%= link_to image_tag(@worker.image.url(:small)) %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @worker.name %>
+</p>
+
+<p>
+  <strong>Correo electronico:</strong>
+  <%= @worker.email %>
+</p>
+
+<%= link_to 'Editar', edit_worker_path(@worker), class: "btn btn-success" %>
+<%= link_to 'Volver', workers_path, class: "btn btn-default" %>

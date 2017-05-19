@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<h1>Gobierno Regional de Los Ríos</h1>
+<%= render 'workers/search' %>
+<hr>
+
+  <div id="workers" class="transitions-enabled">
+    <% @workers.each do |worker| %>
+      <div class="box">
+          <%= link_to (image_tag worker.image.url(:med)), worker %>
+      </div>
+    <% end %>
+  </div>

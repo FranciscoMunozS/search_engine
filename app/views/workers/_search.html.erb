@@ -1,0 +1,8 @@
+<%= form_tag search_workers_path, method: :get, role: "search" do  %>
+  <div class="input-group">
+    <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Buscar funcionario..." %>
+    <div class="input-group-btn">
+      <%= submit_tag "Buscar", name: nil, class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

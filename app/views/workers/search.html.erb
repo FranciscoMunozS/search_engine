@@ -1,0 +1,14 @@
+<h1> Resultados de la busqueda </h1>
+<%= render 'workers/search' %>
+<hr>
+<div class="row">
+  <div id="workers" class="transitions-enabled">
+    <% @workers.each do |worker| %>
+      <div class="box">
+        <%= link_to (image_tag worker.image.url(:med), class: 'image'), worker %>
+        <h4><%= worker.name %></h4>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>

@@ -1,0 +1,43 @@
+<%= form_for(worker) do |f| %>
+  <% if worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker.errors.count, "error") %> evito que se guardara este registro:</h2>
+      <ul>
+      <% worker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div class="col-md-3">
+    <h4>Vista previa</h4>
+    <div id="target">
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <div class="field">
+      <%= f.label :name, "Nombre" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :email, "Correo electronico" %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <br>
+    <div class="field">
+      <%= f.label :image, "Cargar imagen" %>
+      <%= f.file_field :image, id: "pictureInput" %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit class: "btn btn-success" %>
+      <%= link_to "Volver", root_path, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>
+<% end %>

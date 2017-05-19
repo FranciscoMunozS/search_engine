@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require 'masonry/transitions'
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+ @import 'bootstrap-sprockets';
+
+#workers {
+  .box {
+	  width: 285px;
+    text-align: center;
+    img {
+    	  max-width: 100%;
+  	  	height: auto;
+        -webkit-filter: grayscale(100%);
+	      filter: grayscale(100%);
+	      -webkit-transition: .3s ease-in-out;
+	      transition: .3s ease-in-out;
+  	}
+    :hover img {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+}
+
+#target {
+  img {
+    max-width: 500px;
+    max-height: 250px;
+  }
+
+}
